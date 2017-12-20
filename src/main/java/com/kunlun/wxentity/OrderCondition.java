@@ -11,21 +11,39 @@ import com.alibaba.fastjson.annotation.JSONField;
  */
 public class OrderCondition {
 
+    /**
+     * 订单id
+     */
     @JSONField(name = "order_id")
     private Long orderId;
 
+    /**
+     * 订单编号
+     */
     @JSONField(name = "order_no")
     private Long orderNo;
 
+    /**
+     * 微信code
+     */
     @JSONField(name = "wx_code")
     private String wxCode;
 
+    /**
+     * 当前页
+     */
     @JSONField(name = "page_no")
     private int pageNo;
 
+    /**
+     * 每页条数
+     */
     @JSONField(name = "page_size")
     private int pageSize;
 
+    /**
+     * 订单状态
+     */
     private String status;
 
     /**
