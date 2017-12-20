@@ -32,8 +32,7 @@ public class OrderExt extends Order {
     /**
      * 发货信息
      */
-    @JSONField(name = "send_good")
-    private SendGood sendGood;
+    private Logistics logistics;
 
     /**
      * 收件人信息
@@ -100,14 +99,6 @@ public class OrderExt extends Order {
 
     public void setOpenCode(String openCode) {
         this.openCode = openCode;
-    }
-
-    public SendGood getSendGood() {
-        return sendGood;
-    }
-
-    public void setSendGood(SendGood sendGood) {
-        this.sendGood = sendGood;
     }
 
     public Delivery getDelivery() {
@@ -199,6 +190,14 @@ public class OrderExt extends Order {
         this.endDate = endDate;
     }
 
+    public Logistics getLogistics() {
+        return logistics;
+    }
+
+    public void setLogistics(Logistics logistics) {
+        this.logistics = logistics;
+    }
+
     @Override
     public String toString() {
         return "OrderExt{" +
@@ -206,7 +205,7 @@ public class OrderExt extends Order {
                 ", pageSize=" + pageSize +
                 ", ipAddress='" + ipAddress + '\'' +
                 ", openCode='" + openCode + '\'' +
-                ", sendGood=" + sendGood +
+                ", logistics=" + logistics +
                 ", delivery=" + delivery +
                 ", goodMainImage='" + goodMainImage + '\'' +
                 ", expressName='" + expressName + '\'' +
