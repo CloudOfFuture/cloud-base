@@ -28,14 +28,23 @@ public class OrderCondition {
 
     private String status;
 
-    @JSONField(name = "delivery_no")
-    private String deliveryNo;
+    /**
+     * 物流单号
+     */
+    @JSONField(name = "logistic_no")
+    private String logisticNo;
 
-    @JSONField(name = "express_name")
-    private String expressName;
+    /**
+     * 物流名称
+     */
+    @JSONField(name = "logistic_name")
+    private String logisticName;
 
-    @JSONField(name = "express_no")
-    private String expressNo;
+    /**
+     * 公司编码
+     */
+    @JSONField(name = "company_code")
+    private String companyCode;
 
     @JSONField(name = "seller_id")
     private Long sellerId;
@@ -88,36 +97,36 @@ public class OrderCondition {
         this.status = status;
     }
 
-    public String getDeliveryNo() {
-        return deliveryNo;
-    }
-
-    public void setDeliveryNo(String deliveryNo) {
-        this.deliveryNo = deliveryNo;
-    }
-
-    public String getExpressName() {
-        return expressName;
-    }
-
-    public void setExpressName(String expressName) {
-        this.expressName = expressName;
-    }
-
-    public String getExpressNo() {
-        return expressNo;
-    }
-
-    public void setExpressNo(String expressNo) {
-        this.expressNo = expressNo;
-    }
-
     public Long getSellerId() {
         return sellerId;
     }
 
     public void setSellerId(Long sellerId) {
         this.sellerId = sellerId;
+    }
+
+    public String getLogisticNo() {
+        return logisticNo;
+    }
+
+    public void setLogisticNo(String logisticNo) {
+        this.logisticNo = logisticNo;
+    }
+
+    public String getLogisticName() {
+        return logisticName;
+    }
+
+    public void setLogisticName(String logisticName) {
+        this.logisticName = logisticName;
+    }
+
+    public String getCompanyCode() {
+        return companyCode;
+    }
+
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
 
     @Override
@@ -129,9 +138,9 @@ public class OrderCondition {
                 ", pageNo=" + pageNo +
                 ", pageSize=" + pageSize +
                 ", status='" + status + '\'' +
-                ", deliveryNo='" + deliveryNo + '\'' +
-                ", expressName='" + expressName + '\'' +
-                ", expressNo='" + expressNo + '\'' +
+                ", logisticNo='" + logisticNo + '\'' +
+                ", logisticName='" + logisticName + '\'' +
+                ", companyCode='" + companyCode + '\'' +
                 ", sellerId=" + sellerId +
                 '}';
     }
