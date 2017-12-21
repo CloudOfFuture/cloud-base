@@ -22,25 +22,23 @@ public class Category implements Serializable {
     /**
      * 类目名称
      */
-    @JSONField(name = "category_name")
     private String categoryName;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改日期
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
      * 父id
      */
-    @JSONField(name = "parent_id")
     private Long parentId;
 
     /**
@@ -63,7 +61,6 @@ public class Category implements Serializable {
     /**
      * 跳转地址
      */
-    @JSONField(name = "action_url")
     private String actionUrl;
 
     public static long getSerialVersionUID() {

@@ -21,49 +21,43 @@ public class Logistics {
     /**
      * 订单id
      */
-    @JSONField(name = "order_id")
     private Long orderId;
 
     /**
      * 寄件人id
      */
-    @JSONField(name = "sender_id")
     private Long senderId;
 
     /**
      * 物流名称
      */
-    @JSONField(name = "logistic_name")
     private String logisticName;
 
     /**
      * 快递编号
      */
-    @JSONField(name = "express_no")
     private String expressNo;
 
     /**
      * 物流单号
      */
-    @JSONField(name = "logistic_no")
     private String logisticNo;
 
     /**
      * 公司编号
      */
-    @JSONField(name = "company_code")
     private String companyCode;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 更新时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public Long getId() {

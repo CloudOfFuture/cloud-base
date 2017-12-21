@@ -27,19 +27,16 @@ public class Banner implements Serializable {
     /**
      * 轮播图
      */
-    @JSONField(name = "image_url")
     private String imageUrl;
 
     /**
      * 跳转链接
      */
-    @JSONField(name = "action_url")
     private String actionUrl;
 
     /**
      * 访问量
      */
-    @JSONField(name = "visit_total")
     private Integer visitTotal;
 
     /**
@@ -52,13 +49,13 @@ public class Banner implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**

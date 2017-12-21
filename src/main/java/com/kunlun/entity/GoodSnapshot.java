@@ -22,19 +22,16 @@ public class GoodSnapshot implements Serializable {
     /**
      * 商品快照编码
      */
-    @JSONField(name = "good_snapshot_no")
     private String goodSnapshotNo;
 
     /**
      * 商品名称
      */
-    @JSONField(name = "good_name")
     private String goodName;
 
     /**
      * 商品描述
      */
-    @JSONField(name = "good_description")
     private String goodDescription;
 
     /**
@@ -55,37 +52,32 @@ public class GoodSnapshot implements Serializable {
     /**
      * 商品主图
      */
-    @JSONField(name = "main_image_url")
     private String mainImageUrl;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 商户id
      */
-    @JSONField(name = "seller_id")
     private Long sellerId;
 
     /**
      * 商品id
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /**
      * 商品富文本描述
      */
-    @JSONField(name = "rich_content")
     private String richContent;
 
     /**
      * 商品编号
      */
-    @JSONField(name = "good_no")
     private String goodNo;
 
     public static long getSerialVersionUID() {

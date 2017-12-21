@@ -22,19 +22,16 @@ public class Bank implements Serializable {
     /**
      * 银行名称
      */
-    @JSONField(name = "bank_name")
     private String bankName;
 
     /**
      * 开户行地址
      */
-    @JSONField(name = "bank_address")
     private String bankAddress;
 
     /**
      * 银行卡号
      */
-    @JSONField(name = "bank_card_no")
     private String bankCardNo;
 
     /**
@@ -47,25 +44,23 @@ public class Bank implements Serializable {
      * IS_DEFAULT 默认
      * UNDEFAULT  非默认
      */
-    @JSONField(name = "is_default")
     private String isDefault;
 
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private Long userId;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public static long getSerialVersionUID() {

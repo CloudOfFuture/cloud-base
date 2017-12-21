@@ -23,13 +23,11 @@ public class GoodLog implements Serializable {
     /**
      * 商品主键
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /**
      * 商品名称
      */
-    @JSONField(name = "good_name")
     private String goodName;
 
     /**
@@ -40,7 +38,7 @@ public class GoodLog implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     public static long getSerialVersionUID() {
