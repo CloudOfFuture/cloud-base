@@ -22,13 +22,11 @@ public class TicketUser implements Serializable {
     /**
      * 快照id
      */
-    @JSONField(name = "snapshot_id")
     private Long snapshotId;
 
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     /**
@@ -39,13 +37,13 @@ public class TicketUser implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**

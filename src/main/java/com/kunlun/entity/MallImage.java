@@ -22,7 +22,7 @@ public class MallImage implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
@@ -30,55 +30,47 @@ public class MallImage implements Serializable {
      * NORMAL    是
      * UN_NORMAL 否
      */
-    @JSONField(name = "is_rich_text")
     private String  isRichText;
 
     /**
      * 商品id
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /***
      * 品牌id
      */
-    @JSONField(name = "brand_id")
     private Long brandId;
 
     /**
      * 广告id
      */
-    @JSONField(name = "banner_id")
     private Long bannerId;
 
     /**
      * 活动id
      */
-    @JSONField(name = "activity_id")
     private Long activityId;
 
     /**
      * 文章id
      */
-    @JSONField(name = "article_id")
     private Long articleId;
 
     /**
      * 证件照所属用户id
      */
-    @JSONField(name = "id_photo_owner_id")
     private Long idPhotoOwnerId;
 
     /**
      * 商品评价id
      */
-    @JSONField(name = "estimate_id")
     private Long estimateId;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**

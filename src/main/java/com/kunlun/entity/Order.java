@@ -22,37 +22,31 @@ public class Order implements Serializable {
     /**
      * 商铺id
      */
-    @JSONField(name = "seller_id")
     private Long sellerId;
 
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     /**
      * 订单编号
      */
-//    @JSONField(name = "order_no")
     private String orderNo;
 
     /**
      * 快照id
      */
-    @JSONField(name = "good_snapshot_id")
     private Long goodSnapshotId;
 
     /**
      * 运单号
      */
-    @JSONField(name = "delivery_no")
     private String deliveryNo;
 
     /**
      * 收货地址id
      */
-    @JSONField(name = "delivery_id")
     private Long deliveryId;
 
     /**
@@ -65,7 +59,6 @@ public class Order implements Serializable {
      * REFUND      退款
      * REFUNDING   退款中
      */
-    @JSONField(name = "order_status")
     private String orderStatus;
 
     /**
@@ -75,7 +68,6 @@ public class Order implements Serializable {
      * FREE_ORDER        免费试用订单
      * SPELL_GROUP_ORDER 拼团
      */
-    @JSONField(name = "order_type")
     private String orderType;
 
     /**
@@ -85,7 +77,6 @@ public class Order implements Serializable {
      * CREDIT_PAY  信用卡
      * DEPOSIT_PAY 储蓄卡
      */
-    @JSONField(name = "pay_type")
     private String payType;
 
     /**
@@ -126,13 +117,11 @@ public class Order implements Serializable {
     /**
      * 邮政编码
      */
-    @JSONField(name = "post_code")
     private String postCode;
 
     /**
      * 商品名称
      */
-    @JSONField(name = "good_name")
     private String goodName;
 
     /**
@@ -143,50 +132,45 @@ public class Order implements Serializable {
     /**
      * 微信订单号
      */
-    @JSONField(name = "wx_order_no")
     private String wxOrderNo;
 
     /**
      * 下单时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 付款时间
      */
-    @JSONField(name = "pay_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date payDate;
 
     /**
      * 发货时间
      */
-    @JSONField(name = "delivery_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date deliveryDate;
 
     /**
      * 商品id
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /**
      * USE_TICKET    使用优惠券
      * UN_USE_TICKET 不使用优惠券
      */
-    @JSONField(name = "use_ticket")
     private String useTicket;
 
     /**
      * 优惠券id
      */
-    @JSONField(name = "ticket_id")
     private Long ticketId;
 
     /**
      * 预付款订单号
      */
-    @JSONField(name = "prepay_id")
     private String prepayId;
 
     /**
@@ -197,68 +181,59 @@ public class Order implements Serializable {
     /**
      * 申请退款时间
      */
-    @JSONField(name = "refund_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date refundDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
      * 运费 (0为包邮)
      */
-    @JSONField(name = "freight_fee")
     private Integer freightFee;
 
     /**
      * 商品金额
      */
-    @JSONField(name = "good_fee")
     private Integer goodFee;
 
     /**
      * 实付金额
      */
-    @JSONField(name = "payment_fee")
     private Integer paymentFee;
 
     /**
      * 优惠金额
      */
-    @JSONField(name = "reduce_fee")
     private Integer reduceFee;
 
     /**
      * 订单金额
      */
-    @JSONField(name = "order_fee")
     private Integer orderFee;
 
     /**
      * 退款金额
      */
-    @JSONField(name = "refund_fee")
     private Integer refundFee;
 
     /**
      * 发货信息id
      */
-    @JSONField(name = "send_good_id")
     private Long sendGoodId;
 
     /**
      * 该订单消耗的积分
      */
-    @JSONField(name = "operate_point")
     private Integer operatePoint;
 
     /**
      * USE_POINT     使用积分
      * NOT_USE_POINT 不使用积分
      */
-    @JSONField(name = "use_point")
     private String usePoint;
 
     public static long getSerialVersionUID() {

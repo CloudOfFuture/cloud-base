@@ -14,31 +14,26 @@ public class OrderCondition {
     /**
      * 订单id
      */
-    @JSONField(name = "order_id")
     private Long orderId;
 
     /**
      * 订单编号
      */
-    @JSONField(name = "order_no")
     private Long orderNo;
 
     /**
      * 微信code
      */
-    @JSONField(name = "wx_code")
     private String wxCode;
 
     /**
      * 当前页
      */
-    @JSONField(name = "page_no")
     private int pageNo;
 
     /**
      * 每页条数
      */
-    @JSONField(name = "page_size")
     private int pageSize;
 
     /**
@@ -49,22 +44,18 @@ public class OrderCondition {
     /**
      * 物流单号
      */
-    @JSONField(name = "logistic_no")
     private String logisticNo;
 
     /**
      * 物流名称
      */
-    @JSONField(name = "logistic_name")
     private String logisticName;
 
     /**
      * 公司编码
      */
-    @JSONField(name = "company_code")
     private String companyCode;
 
-    @JSONField(name = "seller_id")
     private Long sellerId;
 
     public Long getOrderId() {

@@ -21,13 +21,11 @@ public class SysMenuRoleRelation implements Serializable {
     /**
      * 角色id
      */
-    @JSONField(name = "role_id")
     private Long roleId;
 
     /**
      * 菜单id
      */
-    @JSONField(name = "menu_id")
     private Long menuId;
 
     public static long getSerialVersionUID() {

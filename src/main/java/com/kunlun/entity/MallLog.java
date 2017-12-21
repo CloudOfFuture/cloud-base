@@ -22,13 +22,11 @@ public class MallLog implements Serializable {
     /**
      * 商品编码
      */
-    @JSONField(name = "good_no")
     private String  goodNo;
 
     /**
      * 店铺编码
      */
-    @JSONField(name = "seller_no")
     private String sellerNo;
 
     /**
@@ -44,13 +42,12 @@ public class MallLog implements Serializable {
     /**
      * ip地址
      */
-    @JSONField(name = "id_address")
     private String idAddress;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
