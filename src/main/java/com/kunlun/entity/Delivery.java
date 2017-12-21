@@ -22,7 +22,6 @@ public class Delivery implements Serializable {
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     /**
@@ -58,19 +57,18 @@ public class Delivery implements Serializable {
     /**
      * 邮编
      */
-    @JSONField(name = "post_code")
     private String postCode;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
@@ -84,7 +82,6 @@ public class Delivery implements Serializable {
      * DEFAULT_ADDRESS    默认地址
      * UN_DEFAULT_ADDRESS 非默认地址
      */
-    @JSONField(name = "default_address")
     private String defaultAddress;
 
     public static long getSerialVersionUID() {

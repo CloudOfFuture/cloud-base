@@ -22,7 +22,6 @@ public class Estimate implements Serializable {
     /**
      * 商品id
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /**
@@ -33,25 +32,23 @@ public class Estimate implements Serializable {
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     /**
      * 微信Code
      */
-    @JSONField(name = "wx_code")
     private String wxCode;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
@@ -62,7 +59,6 @@ public class Estimate implements Serializable {
     /**
      * 昵称
      */
-    @JSONField(name = "nick_name")
     private String nickName;
 
     public static long getSerialVersionUID() {

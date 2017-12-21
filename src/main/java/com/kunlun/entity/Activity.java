@@ -40,19 +40,18 @@ public class Activity implements Serializable {
      * PERFERENCE     优选
      * FREE           试用
      */
-    @JSONField(name = "activity_type")
     private String activityType;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
@@ -68,13 +67,13 @@ public class Activity implements Serializable {
     /**
      * 活动开始时间
      */
-    @JSONField(name = "start_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date startDate;
 
     /**
      * 活动结束时间
      */
-    @JSONField(name = "end_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date endDate;
 
     /**

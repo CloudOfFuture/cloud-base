@@ -22,25 +22,23 @@ public class Brand implements Serializable {
     /**
      * 品牌名称
      */
-    @JSONField(name = "brand_name")
     private String brandName;
 
     /**
      * 图片id
      */
-    @JSONField(name = "brand_image")
     private String brandImage;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 更新时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
@@ -59,7 +57,6 @@ public class Brand implements Serializable {
     /**
      * 负责人电话
      */
-    @JSONField(name = "contact_phone")
     private String contactPhone;
 
     /**
@@ -70,7 +67,6 @@ public class Brand implements Serializable {
     /**
      * 品牌简称
      */
-    @JSONField(name = "short_name")
     private String shortName;
 
     public static long getSerialVersionUID() {

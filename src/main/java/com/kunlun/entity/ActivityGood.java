@@ -22,19 +22,17 @@ public class ActivityGood implements Serializable {
     /**
      * 活动id
      */
-    @JSONField(name = "activity_id")
     private Long activityId;
 
     /**
      * 商品id
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
@@ -52,7 +50,7 @@ public class ActivityGood implements Serializable {
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public static long getSerialVersionUID() {
