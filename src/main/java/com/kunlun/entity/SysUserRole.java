@@ -21,13 +21,11 @@ public class SysUserRole implements Serializable {
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private Long userId;
 
     /**
      * 角色id
      */
-    @JSONField(name = "role_id")
     private Long roleId;
 
     public static long getSerialVersionUID() {

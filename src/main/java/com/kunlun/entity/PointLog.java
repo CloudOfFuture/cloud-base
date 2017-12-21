@@ -22,7 +22,6 @@ public class PointLog implements Serializable{
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     /**
@@ -35,19 +34,17 @@ public class PointLog implements Serializable{
     /**
      * 当前积分
      */
-    @JSONField(name = "current_point")
     private Integer currentPoint;
 
     /**
      * 操作积分
      */
-    @JSONField(name = "operate_point")
     private Integer operatePoint;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     public static long getSerialVersionUID() {

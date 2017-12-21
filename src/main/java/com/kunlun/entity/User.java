@@ -32,7 +32,7 @@ public class User implements Serializable {
     /**
      * 出生日期
      */
-    @JSONField(name = "born_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private String bornDate;
 
     /**
@@ -65,13 +65,11 @@ public class User implements Serializable {
     /**
      * 头像
      */
-    @JSONField(name = "head_picture")
     private String headPicture;
 
     /**
      * 昵称
      */
-    @JSONField(name = "nick_name")
     private String nickName;
 
     /**
@@ -85,7 +83,6 @@ public class User implements Serializable {
     /**
      * 证件号码
      */
-    @JSONField(name = "certificate_id")
     private String certificateId;
 
     /**
@@ -103,25 +100,24 @@ public class User implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 更新时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
      * 最后登录时间
      */
-    @JSONField(name = "last_login_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date lastLoginDate;
 
     /**
      * 登录ip
      */
-    @JSONField(name = "login_ip")
     private String loginIp;
 
     /**
@@ -130,19 +126,16 @@ public class User implements Serializable {
      * USER_ORDINARY 普通用户
      * SELLER        商户
      */
-    @JSONField(name = "user_type")
     private String userType;
 
     /**
      * 证件照正面
      */
-    @JSONField(name = "id_photo_front_url")
     private String idPhotoFrontUrl;
 
     /**
      * 证件照反面
      */
-    @JSONField(name = "id_photo_bg_url")
     private String idPhotoBgUrl;
 
     public static long getSerialVersionUID() {

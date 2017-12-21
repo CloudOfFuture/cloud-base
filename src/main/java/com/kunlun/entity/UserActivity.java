@@ -22,25 +22,22 @@ public class UserActivity implements Serializable {
     /**
      * 活动id
      */
-    @JSONField(name = "activity_id")
     private Long activityId;
 
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     /**
      * 商品id
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     public static long getSerialVersionUID() {

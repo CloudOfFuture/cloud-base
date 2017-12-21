@@ -11,19 +11,16 @@ public class UnifiedRequestData {
     /**
      * 商品id
      */
-    @JSONField(name = "good_id")
     private Long goodId;
 
     /**
      * 配送地址id
      */
-    @JSONField(name = "delivery_id")
     private Long deliveryId;
 
     /**
      * 商家名称
      */
-    @JSONField(name = "seller_name")
     private String sellerName;
 
     /**
@@ -38,7 +35,6 @@ public class UnifiedRequestData {
     /**
      * 订单类型 1pc订单  2手机订单
      */
-    @JSONField(name = "order_type")
     private String orderType;
     /**
      * 优惠券id
@@ -49,7 +45,6 @@ public class UnifiedRequestData {
      * 1使用  0 不适用
      * 是否使用优惠券
      */
-    @JSONField(name = "use_ticket")
     private String useTicket;
 
     /**
@@ -60,37 +55,30 @@ public class UnifiedRequestData {
     /**
      * 商品总额
      */
-    @JSONField(name = "good_fee")
     private int goodFee;
 
     /**
      * 实付金额
      */
-    @JSONField(name = "payment_fee")
     private int paymentFee;
 
     /**
      * 订单金额
      */
-    @JSONField(name = "order_fee")
     private int orderFee;
 
     /**
      * 优惠金额
      */
-    @JSONField(name = "reduce_fee")
     private int reduceFee;
 
     /**
      * 运费金额
      */
-    @JSONField(name = "freight_fee")
     private int freightFee;
 
-    @JSONField(name = "wx_code")
     private String wxCode;
 
-    @JSONField(name = "ip_address")
     private String ipAddress;
 
 
