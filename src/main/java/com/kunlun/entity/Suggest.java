@@ -36,13 +36,12 @@ public class Suggest implements Serializable{
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     public static long getSerialVersionUID() {

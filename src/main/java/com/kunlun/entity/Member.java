@@ -32,25 +32,21 @@ public class Member implements Serializable {
     /**
      * 头像
      */
-    @JSONField(name = "head_image")
     private String headImage;
 
     /**
      * 昵称
      */
-    @JSONField(name = "nick_name")
     private String nickName;
 
     /**
      * 证件号码
      */
-    @JSONField(name = "certificated_id")
     private String certificatedId;
 
     /**
      * 证件类型
      */
-    @JSONField(name = "certificated_type")
     private String certificatedType;
 
     /**
@@ -61,7 +57,7 @@ public class Member implements Serializable {
     /**
      * 生日
      */
-    @JSONField(name = "born_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private String bornDate;
 
     /**
@@ -84,13 +80,13 @@ public class Member implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public static long getSerialVersionUID() {

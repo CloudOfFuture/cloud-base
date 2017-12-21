@@ -22,13 +22,11 @@ public class Ticket implements Serializable {
     /**
      * 商户id
      */
-    @JSONField(name = "seller_id")
     private Long sellerId;
 
     /**
      * 名称
      */
-    @JSONField(name = "ticket_name")
     private String ticketName;
 
     /**
@@ -39,13 +37,13 @@ public class Ticket implements Serializable {
     /**
      * 开始时间
      */
-    @JSONField(name = "start_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date startDate;
 
     /**
      * 结束时间
      */
-    @JSONField(name = "end_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date endDate;
 
     /**
@@ -68,13 +66,12 @@ public class Ticket implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 优惠券编码
      */
-    @JSONField(name = "ticket_no")
     private String ticketNo;
 
     /**
@@ -87,7 +84,7 @@ public class Ticket implements Serializable {
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
@@ -95,7 +92,6 @@ public class Ticket implements Serializable {
      * LIMITED    限量
      * UN_LIMITED 不限量
      */
-    @JSONField(name = "num_limit")
     private String numLimit;
 
     /**
@@ -103,19 +99,17 @@ public class Ticket implements Serializable {
      * PLATFORM_USER 平台使用
      * OTHER_USER    其他地方使用
      */
-    @JSONField(name = "use_range")
     private String useRange;
 
     /**
      * 优惠卷使用时间
      */
-    @JSONField(name = "use_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date useDate;
 
     /**
      * 满减金额
      */
-    @JSONField(name = "reduce_money")
     private Integer reduceMoney;
 
     public static long getSerialVersionUID() {

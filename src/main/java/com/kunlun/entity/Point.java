@@ -22,7 +22,6 @@ public class Point implements Serializable{
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private String userId;
 
     /**
@@ -38,19 +37,18 @@ public class Point implements Serializable{
     /**
      * 等级名称
      */
-    @JSONField(name = "level_name")
     private String levelName;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public static long getSerialVersionUID() {
