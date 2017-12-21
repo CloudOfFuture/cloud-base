@@ -34,7 +34,7 @@ public class Order implements Serializable {
     /**
      * 订单编号
      */
-    @JSONField(name = "order_no")
+//    @JSONField(name = "order_no")
     private String orderNo;
 
     /**
