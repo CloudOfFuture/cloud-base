@@ -1,7 +1,6 @@
-package com.kunlun.wxentity.wxUtils;
+package com.kunlun.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.kunlun.utils.WxTrustManager;
 import com.kunlun.wxentity.AuthorizationCode;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -137,9 +136,9 @@ public class WxUtil {
      * @return
      */
     public static String getOpenId(String wxCode) {
-        String apiUrl = WxPayConfig.OPEN_ID_URL
-                + "appid=" + WxPayConfig.APP_ID
-                + "&secret=" + WxPayConfig.APP_SECRET
+        String apiUrl = WxPayConstant.OPEN_ID_URL
+                + "appid=" + WxPayConstant.APP_ID
+                + "&secret=" + WxPayConstant.APP_SECRET
                 + "&js_code=" + wxCode
                 + "&grant_type=authorization_code";
         String response = WxUtil.httpsRequest(apiUrl, "GET", null);
