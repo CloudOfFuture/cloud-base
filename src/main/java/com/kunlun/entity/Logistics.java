@@ -6,36 +6,58 @@ import java.util.Date;
 
 /**
  * 物流信息
+ *
  * @author by kunlun
  * @version <0.1>
  * @created on 2017/12/20.
  */
 public class Logistics {
 
+    /**
+     * 主键
+     */
     private Long id;
 
-    @JSONField(name = "order_id")
+    /**
+     * 订单id
+     */
     private Long orderId;
 
-    @JSONField(name = "sender_id")
+    /**
+     * 寄件人id
+     */
     private Long senderId;
 
-    @JSONField(name = "logistic_name")
+    /**
+     * 物流名称
+     */
     private String logisticName;
 
-    @JSONField(name = "express_no")
+    /**
+     * 快递编号
+     */
     private String expressNo;
 
-    @JSONField(name = "logistic_no")
+    /**
+     * 物流单号
+     */
     private String logisticNo;
 
-    @JSONField(name = "company_code")
+    /**
+     * 公司编号
+     */
     private String companyCode;
 
-    @JSONField(name = "create_date",format = "yyyy-MM-dd HH:mm:ss")
+    /**
+     * 创建时间
+     */
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
-    @JSONField(name = "update_date",format = "yyyy-MM-dd HH:mm:ss")
+    /**
+     * 更新时间
+     */
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public Long getId() {

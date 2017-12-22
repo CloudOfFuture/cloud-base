@@ -32,13 +32,13 @@ public class SysRole implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**
@@ -59,7 +59,6 @@ public class SysRole implements Serializable {
      * LEVEL_ADMIN    管理员
      * LEVEL_ORDINARY 普通
      */
-    @JSONField(name = "role_level")
     private String roleLevel;
 
     public static long getSerialVersionUID() {

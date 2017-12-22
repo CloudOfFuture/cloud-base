@@ -42,13 +42,11 @@ public class Seller implements Serializable {
     /**
      * 用户id
      */
-    @JSONField(name = "user_id")
     private Long userId;
 
     /**
      * 店铺编号
      */
-    @JSONField(name = "seller_no")
     private String sellerNo;
 
     /**
@@ -59,31 +57,28 @@ public class Seller implements Serializable {
     /**
      * 店铺名称
      */
-    @JSONField(name = "seller_name")
     private String sellerName;
 
     /**
      * 店铺地址
      */
-    @JSONField(name = "seller_address")
     private String sellerAddress;
 
     /**
      * 店铺描述
      */
-    @JSONField(name = "seller)description")
     private String sellerDescription;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     /**

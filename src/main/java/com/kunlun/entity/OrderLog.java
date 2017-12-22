@@ -22,7 +22,6 @@ public class OrderLog implements Serializable {
     /**
      * 订单号
      */
-    @JSONField(name = "order_no")
     private String orderNo;
 
     /**
@@ -33,19 +32,17 @@ public class OrderLog implements Serializable {
     /**
      * ip地址
      */
-    @JSONField(name = "ip_address")
     private String ipAddress;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 订单id
      */
-    @JSONField(name = "order_id")
     private Long orderId;
 
     public static long getSerialVersionUID() {
