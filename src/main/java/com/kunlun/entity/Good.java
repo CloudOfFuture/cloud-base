@@ -47,7 +47,7 @@ public class Good implements Serializable {
     /**
      * 销量
      */
-    private Integer saleVolume;
+    private int saleVolume;
 
     /**
      * 折扣
