@@ -39,28 +39,28 @@ public class Good implements Serializable {
     /**
      * 促销价
      */
-    private Integer promotion;
+    private int promotion;
 
     /**
      * 价格
      */
-    private Integer price;
+    private int price;
 
     /**
      * 销量
      */
     @JSONField(name = "sale_volume")
-    private Integer saleVolume;
+    private int saleVolume;
 
     /**
      * 折扣
      */
-    private Integer discount;
+    private int discount;
 
     /**
      * 库存
      */
-    private Integer stock;
+    private int stock;
 
     /**
      * 上下架
@@ -120,7 +120,7 @@ public class Good implements Serializable {
      * 浏览量
      */
     @JSONField(name = "visit_total")
-    private Integer visitTotal;
+    private int visitTotal;
 
     /**
      * 商品编码
@@ -169,7 +169,7 @@ public class Good implements Serializable {
      * 运费
      */
     @JSONField(name = "freight_fee")
-    private Integer freightFee;
+    private int freightFee;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -207,43 +207,43 @@ public class Good implements Serializable {
         this.description = description;
     }
 
-    public Integer getPromotion() {
+    public int getPromotion() {
         return promotion;
     }
 
-    public void setPromotion(Integer promotion) {
+    public void setPromotion(int promotion) {
         this.promotion = promotion;
     }
 
-    public Integer getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public Integer getSaleVolume() {
+    public int getSaleVolume() {
         return saleVolume;
     }
 
-    public void setSaleVolume(Integer saleVolume) {
+    public void setSaleVolume(int saleVolume) {
         this.saleVolume = saleVolume;
     }
 
-    public Integer getDiscount() {
+    public int getDiscount() {
         return discount;
     }
 
-    public void setDiscount(Integer discount) {
+    public void setDiscount(int discount) {
         this.discount = discount;
     }
 
-    public Integer getStock() {
+    public int getStock() {
         return stock;
     }
 
-    public void setStock(Integer stock) {
+    public void setStock(int stock) {
         this.stock = stock;
     }
 
@@ -311,11 +311,11 @@ public class Good implements Serializable {
         this.sellerId = sellerId;
     }
 
-    public Integer getVisitTotal() {
+    public int getVisitTotal() {
         return visitTotal;
     }
 
-    public void setVisitTotal(Integer visitTotal) {
+    public void setVisitTotal(int visitTotal) {
         this.visitTotal = visitTotal;
     }
 
@@ -375,11 +375,11 @@ public class Good implements Serializable {
         this.reason = reason;
     }
 
-    public Integer getFreightFee() {
+    public int getFreightFee() {
         return freightFee;
     }
 
-    public void setFreightFee(Integer freightFee) {
+    public void setFreightFee(int freightFee) {
         this.freightFee = freightFee;
     }
 
