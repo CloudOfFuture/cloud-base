@@ -99,7 +99,9 @@ public enum CommonEnum {
     NOT_AUDIT("NOT_AUDIT", "未审核"),
     AUDITING("AUDITING", "审核中"),
     NOT_PASS_AUDIT("NOT_PASS_AUDIT", "审核未通过"),
-    PASS_AUDIT("PASS_AUDIT", "审核通过");
+    PASS_AUDIT("PASS_AUDIT", "审核通过"),
+    DELETE("DELETE","删除状态"),
+    CLOSE_LEADER("CLOSE_LEADER","管理员关闭");
     /**
      * 编码
      */
