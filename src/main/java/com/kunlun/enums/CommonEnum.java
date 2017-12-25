@@ -74,8 +74,9 @@ public enum CommonEnum {
     ALREADY_USED("ALREADY_USED", "已使用"),
     UNUSED("UNUSED", "未使用"),
     NOT_AUTH("NOT_AUTH", "未实名认证"),
-    IS_AUTH("IS_AUTH", "认证通过"),
-    NOT_PASS_AUTH("NOT_PASS_AUTH", "认证未通过"),
+    PASS_AUTH("PASS_AUTH", "实名认证通过"),
+    AUTH_ING("AUTH_ING", "实名认证审核中"),
+    NOT_PASS_AUTH("NOT_PASS_AUTH", "实名认证未通过"),
     USER_ADMIN("USER_ADMIN", "管理员用户"),
     USER_ORDINARY("USER_ORDINARY", "普通用户"),
     CUT("CUT", "裁剪"),
@@ -95,10 +96,10 @@ public enum CommonEnum {
     LEVEL_ORDINARY("LEVEL_ORDINARY", "普通角色等级"),
     AUTH("AUTH", "JSONID:94268"),
     SALT("SALT", "&&salt"),
-    AUDITED("AUDITED","已审核"),
-    AUDITING("AUDITING","审核中"),
-    NOT_AUDIT("NOT_AUDIT","审核未通过"),
-    PASS_AUDIT("PASS_AUDIT","审核通过");
+    NOT_AUDIT("NOT_AUDIT", "未审核"),
+    AUDITING("AUDITING", "审核中"),
+    NOT_PASS_AUDIT("NOT_PASS_AUDIT", "审核未通过"),
+    PASS_AUDIT("PASS_AUDIT", "审核通过");
     /**
      * 编码
      */

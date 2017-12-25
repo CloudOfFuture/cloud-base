@@ -1,8 +1,11 @@
 package com.kunlun.utils;
 
+import com.github.pagehelper.util.StringUtil;
 import com.kunlun.entity.Good;
 import com.kunlun.entity.GoodSnapshot;
+import com.kunlun.entity.User;
 import org.springframework.beans.BeanUtils;
+import org.springframework.util.StringUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -49,5 +52,45 @@ public class CommonUtil {
             e.printStackTrace();
         }
         return targetDateString;
+    }
+
+    /**
+     * 计算年龄和性别
+     *
+     * @param idCardNo String
+     */
+    public static String getGenderByIdCardNo(String idCardNo) {
+        if (StringUtil.isEmpty(idCardNo)) {
+            return null;
+        }
+        int leg = idCardNo.length();
+        if (leg != 18 && leg != 15) {
+            return null;
+        } else if (leg == 18 && Integer.parseInt(idCardNo.substring(16).substring(0, 1)) % 2 == 0) {
+            return "FEMALE";
+        } else if (leg == 15 && Integer.parseInt(idCardNo.substring(14, 15)) % 2 == 0) {
+            return "FEMALE";
+        }
+        return "MALE";
+    }
+
+    /**
+     * 计算年龄和性别
+     *
+     * @param idCardNo String
+     */
+    public static Integer getAgeByIdCardNo(String idCardNo) {
+        int leg = idCardNo.length();
+        if (leg == 18) {
+            String dates = idCardNo.substring(6, 10);
+            SimpleDateFormat df = new SimpleDateFormat("yyyy");
+            String year = df.format(new Date());
+            return Integer.parseInt(year) - Integer.parseInt(dates);
+        } else {
+            String dates = "19" + idCardNo.substring(6, 8);
+            SimpleDateFormat df = new SimpleDateFormat("yyyy");
+            String year = df.format(new Date());
+            return Integer.parseInt(year) - Integer.parseInt(dates);
+        }
     }
 }

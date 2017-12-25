@@ -121,6 +121,11 @@ public class User implements Serializable {
     private String loginIp;
 
     /**
+     * 登录返回token
+     */
+    private String token;
+
+    /**
      * 用户类型
      * USER_ADMIN    管理员
      * USER_ORDINARY 普通用户
@@ -137,6 +142,14 @@ public class User implements Serializable {
      * 证件照反面
      */
     private String idPhotoBgUrl;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
