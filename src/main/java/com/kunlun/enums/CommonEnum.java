@@ -5,7 +5,6 @@ package com.kunlun.enums;
  * @created on 2017/11/28.
  */
 public enum CommonEnum {
-
     NORMAL("NORMAL", "正常"),
     UN_NORMAL("UN_NORMAL", "非正常"),
     SECONDS_KILL("SECONDS_KILL", "秒杀"),
@@ -100,8 +99,18 @@ public enum CommonEnum {
     AUDITING("AUDITING", "审核中"),
     NOT_PASS_AUDIT("NOT_PASS_AUDIT", "审核未通过"),
     PASS_AUDIT("PASS_AUDIT", "审核通过"),
-    DELETE("DELETE","删除状态"),
-    CLOSE_LEADER("CLOSE_LEADER","管理员关闭");
+    DELETE("DELETE", "删除状态"),
+    CLOSE_LEADER("CLOSE_LEADER", "管理员关闭"),
+
+    //图片类型
+    TYPE_IMG_GOOD("TYPE_IMG_GOOD", "商品图片"),
+    TYPE_IMG_BRAND("TYPE_IMG_BRAND", "品牌图片"),
+    TYPE_IMG_ARTICLE("TYPE_IMG_ARTICLE", "文章图片"),
+    TYPE_IMG_ESTIMATE("TYPE_IMG_ESTIMATE", "商品评价图片"),
+    TYPE_IMG_BANNER("TYPE_IMG_BANNER", "广告图片"),
+    TYPE_IMG_ACTIVITY("TYPE_IMG_ACTIVITY", "活动图片"),
+    TYPE_IMG_RICH_CONTENT("TYPE_IMG_RICH_CONTENT", "富文本图片"),
+    TYPE_IMG_ID_PHOTO("TYPE_IMG_ID_PHOTO", "证件照图片"),;
     /**
      * 编码
      */
