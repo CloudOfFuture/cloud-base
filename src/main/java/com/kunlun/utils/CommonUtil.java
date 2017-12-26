@@ -1,9 +1,8 @@
 package com.kunlun.utils;
 
 import com.github.pagehelper.util.StringUtil;
-import com.kunlun.entity.Good;
-import com.kunlun.entity.GoodSnapshot;
-import com.kunlun.entity.User;
+import com.kunlun.entity.*;
+import com.kunlun.wxentity.UnifiedRequestData;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
 
@@ -92,5 +91,16 @@ public class CommonUtil {
             String year = df.format(new Date());
             return Integer.parseInt(year) - Integer.parseInt(dates);
         }
+    }
+
+    public  static Order constructOrder(Good good,
+                                        Long goodSnapShotId,
+                                        UnifiedRequestData unifiedRequestData,
+                                        Delivery delivery,
+                                        String userId){
+        Order order = new Order();
+        order.setGoodSnapshotId(goodSnapShotId);
+        order.setUserId(userId);
+        return order;
     }
 }
