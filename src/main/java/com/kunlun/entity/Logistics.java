@@ -33,10 +33,6 @@ public class Logistics {
      */
     private String logisticName;
 
-    /**
-     * 快递编号
-     */
-    private String expressNo;
 
     /**
      * 物流单号
@@ -92,14 +88,6 @@ public class Logistics {
         this.logisticName = logisticName;
     }
 
-    public String getExpressNo() {
-        return expressNo;
-    }
-
-    public void setExpressNo(String expressNo) {
-        this.expressNo = expressNo;
-    }
-
     public String getLogisticNo() {
         return logisticNo;
     }
@@ -139,7 +127,6 @@ public class Logistics {
                 ", orderId=" + orderId +
                 ", senderId=" + senderId +
                 ", logisticName='" + logisticName + '\'' +
-                ", expressNo='" + expressNo + '\'' +
                 ", logisticNo='" + logisticNo + '\'' +
                 ", companyCode='" + companyCode + '\'' +
                 ", createDate=" + createDate +

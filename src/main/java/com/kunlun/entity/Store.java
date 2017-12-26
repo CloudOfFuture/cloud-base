@@ -1,8 +1,6 @@
 package com.kunlun.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.sun.org.apache.xpath.internal.operations.String;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -48,7 +46,7 @@ public class Store implements Serializable {
     /**
      * 店铺编号
      */
-    private String sellerNo;
+    private String storeNo;
 
     /**
      * 信誉值(0-99)
@@ -131,12 +129,12 @@ public class Store implements Serializable {
         this.userId = userId;
     }
 
-    public String getSellerNo() {
-        return sellerNo;
+    public String getStoreNo() {
+        return storeNo;
     }
 
-    public void setSellerNo(String sellerNo) {
-        this.sellerNo = sellerNo;
+    public void setStoreNo(String storeNo) {
+        this.storeNo = storeNo;
     }
 
     public Integer getReputation() {
@@ -203,7 +201,7 @@ public class Store implements Serializable {
                 ", status=" + status +
                 ", mobile=" + mobile +
                 ", userId=" + userId +
-                ", sellerNo=" + sellerNo +
+                ", sellerNo=" + storeNo +
                 ", reputation=" + reputation +
                 ", storeName=" + storeName +
                 ", storeAddress=" + storeAddress +

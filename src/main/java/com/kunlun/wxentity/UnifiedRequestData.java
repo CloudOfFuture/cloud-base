@@ -39,7 +39,7 @@ public class UnifiedRequestData {
     /**
      * 优惠券id
      */
-    private Long ticket;
+    private Long ticketId;
 
     /**
      * 1使用  0 不适用
@@ -130,14 +130,6 @@ public class UnifiedRequestData {
         this.message = message;
     }
 
-    public Long getTicket() {
-        return ticket;
-    }
-
-    public void setTicket(Long ticket) {
-        this.ticket = ticket;
-    }
-
     public int getPoint() {
         return point;
     }
@@ -210,16 +202,24 @@ public class UnifiedRequestData {
         this.ipAddress = ipAddress;
     }
 
+    public Long getTicketId() {
+        return ticketId;
+    }
+
+    public void setTicketId(Long ticketId) {
+        this.ticketId = ticketId;
+    }
+
     @Override
     public String toString() {
-        return "WxOrderRequestData{" +
+        return "UnifiedRequestData{" +
                 "goodId=" + goodId +
                 ", deliveryId=" + deliveryId +
                 ", sellerName='" + sellerName + '\'' +
                 ", count=" + count +
                 ", message='" + message + '\'' +
                 ", orderType='" + orderType + '\'' +
-                ", ticket=" + ticket +
+                ", ticketId=" + ticketId +
                 ", useTicket='" + useTicket + '\'' +
                 ", point=" + point +
                 ", goodFee=" + goodFee +
