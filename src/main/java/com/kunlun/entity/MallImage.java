@@ -30,7 +30,7 @@ public class MallImage implements Serializable {
      * NORMAL    是
      * UN_NORMAL 否
      */
-    private String  isRichText;
+    private String isRichText;
 
     /**
      * 商品id
@@ -77,6 +77,19 @@ public class MallImage implements Serializable {
      * 图片主图地址
      */
     private String url;
+
+    public MallImage() {
+    }
+
+    public MallImage(String url) {
+        this.url = url;
+    }
+
+    public MallImage(String url, String isRichText) {
+        this.url = url;
+        this.isRichText = isRichText;
+    }
+
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
