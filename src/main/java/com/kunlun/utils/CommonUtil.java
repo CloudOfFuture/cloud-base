@@ -2,6 +2,7 @@ package com.kunlun.utils;
 
 import com.github.pagehelper.util.StringUtil;
 import com.kunlun.entity.*;
+import com.kunlun.enums.CommonEnum;
 import com.kunlun.wxentity.UnifiedRequestData;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
@@ -101,6 +102,26 @@ public class CommonUtil {
         Order order = new Order();
         order.setGoodSnapshotId(goodSnapShotId);
         order.setUserId(userId);
+        order.setOrderNo(OrderNoUtil.getOrderNo());
+        order.setSellerId(good.getSellerId());
+        order.setPayType("");//构建订单,仍未支付
+        order.setOrderType(CommonEnum.MOBILE_ORDER.getCode());
+        order.setOrderStatus(CommonEnum.UN_PAY.getCode());//设置为待付款
+        order.setGoodName(good.getGoodName());
+        order.setDeliveryId(delivery.getId());
+        order.setOperatePoint(unifiedRequestData.getPoint());
+        order.setUseTicket(unifiedRequestData.getUseTicket());
+        order.setOrderFee(unifiedRequestData.getOrderFee());
+        order.setGoodFee(unifiedRequestData.getGoodFee());
+        order.setReduceFee(unifiedRequestData.getReduceFee());
+        order.setFreightFee(unifiedRequestData.getFreightFee());
+        order.setPaymentFee(unifiedRequestData.getPaymentFee());
+        order.setCount(unifiedRequestData.getCount());
+        order.setMessage(unifiedRequestData.getMessage());
+        order.setGoodId(good.getId());
+        order.setSellerId(good.getSellerId());
+
+
         return order;
     }
 }
