@@ -80,6 +80,9 @@ public class CommonUtil {
      * @param idCardNo String
      */
     public static Integer getAgeByIdCardNo(String idCardNo) {
+        if (StringUtil.isEmpty(idCardNo)) {
+            return null;
+        }
         int leg = idCardNo.length();
         if (leg == 18) {
             String dates = idCardNo.substring(6, 10);
@@ -96,6 +99,7 @@ public class CommonUtil {
 
     /**
      * 构造订单
+     *
      * @param good
      * @param goodSnapShotId
      * @param unifiedRequestData
@@ -103,13 +107,13 @@ public class CommonUtil {
      * @param userId
      * @return
      */
-    public  static Order constructOrder(Good good,
-                                        Long goodSnapShotId,
-                                        UnifiedRequestData unifiedRequestData,
-                                        Delivery delivery,
-                                        String userId){
+    public static Order constructOrder(Good good,
+                                       Long goodSnapShotId,
+                                       UnifiedRequestData unifiedRequestData,
+                                       Delivery delivery,
+                                       String userId) {
         Order order = new Order();
-        BeanUtils.copyProperties(order,delivery);
+        BeanUtils.copyProperties(order, delivery);
         //构建订单,仍未支付
         order.setPayType("");
         order.setOrderType(CommonEnum.MOBILE_ORDER.getCode());
@@ -129,13 +133,13 @@ public class CommonUtil {
         order.setGoodId(good.getId());
         order.setSellerId(good.getSellerId());
         //是否使用优惠券
-        if(CommonEnum.USE_TICKET.getCode().equals(order.getUseTicket())){
+        if (CommonEnum.USE_TICKET.getCode().equals(order.getUseTicket())) {
             order.setTicketId(unifiedRequestData.getTicketId());
         }
         //是否使用积分
-        if(unifiedRequestData.getPoint()<=0){
+        if (unifiedRequestData.getPoint() <= 0) {
             order.setUsePoint(CommonEnum.NOT_USE_POINT.getCode());
-        }else {
+        } else {
             order.setUsePoint(CommonEnum.USE_POINT.getCode());
         }
         //设置用户id,商品快照id,商户id,商户id,商品编号
