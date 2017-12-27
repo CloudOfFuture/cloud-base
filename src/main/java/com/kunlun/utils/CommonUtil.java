@@ -94,19 +94,27 @@ public class CommonUtil {
         }
     }
 
+    /**
+     * 构造订单
+     * @param good
+     * @param goodSnapShotId
+     * @param unifiedRequestData
+     * @param delivery
+     * @param userId
+     * @return
+     */
     public  static Order constructOrder(Good good,
                                         Long goodSnapShotId,
                                         UnifiedRequestData unifiedRequestData,
                                         Delivery delivery,
                                         String userId){
         Order order = new Order();
-        order.setGoodSnapshotId(goodSnapShotId);
-        order.setUserId(userId);
-        order.setOrderNo(OrderNoUtil.getOrderNo());
-        order.setSellerId(good.getSellerId());
-        order.setPayType("");//构建订单,仍未支付
+        BeanUtils.copyProperties(order,delivery);
+        //构建订单,仍未支付
+        order.setPayType("");
         order.setOrderType(CommonEnum.MOBILE_ORDER.getCode());
-        order.setOrderStatus(CommonEnum.UN_PAY.getCode());//设置为待付款
+        //设置为待付款
+        order.setOrderStatus(CommonEnum.UN_PAY.getCode());
         order.setGoodName(good.getGoodName());
         order.setDeliveryId(delivery.getId());
         order.setOperatePoint(unifiedRequestData.getPoint());
@@ -120,7 +128,21 @@ public class CommonUtil {
         order.setMessage(unifiedRequestData.getMessage());
         order.setGoodId(good.getId());
         order.setSellerId(good.getSellerId());
-
+        //是否使用优惠券
+        if(CommonEnum.USE_TICKET.getCode().equals(order.getUseTicket())){
+            order.setTicketId(unifiedRequestData.getTicketId());
+        }
+        //是否使用积分
+        if(unifiedRequestData.getPoint()<=0){
+            order.setUsePoint(CommonEnum.NOT_USE_POINT.getCode());
+        }else {
+            order.setUsePoint(CommonEnum.USE_POINT.getCode());
+        }
+        //设置用户id,商品快照id,商户id,商户id,商品编号
+        order.setGoodSnapshotId(goodSnapShotId);
+        order.setUserId(userId);
+        order.setOrderNo(OrderNoUtil.getOrderNo());
+        order.setSellerId(good.getSellerId());
 
         return order;
     }
