@@ -88,4 +88,10 @@ public class Constant {
     public static final int WATER_REMARK_SIZE = 220;
 
 
+    /**
+     * 普通订单支付超时时间:2小时
+     */
+    public static final long TIME_TWO_HOUR = 1000 * 60 * 60 * 2;
+
+
 }
