@@ -31,14 +31,14 @@ public class MallImg {
 
     /**
      * 图片类型
-     * 商品图片 0,
-     * 品牌图片 1,
-     * 文章图片 2,
-     * 商品评价图片 3,
-     * 广告图片 4,
-     * 活动图片 5,
-     * 富文本图片路径 6,
-     * 证件照图片路径 7
+     * TYPE_IMG_GOOD 商品图片
+     * TYPE_IMG_BRAND 品牌图片
+     * TYPE_IMG_ARTICLE  文章图片
+     * TYPE_IMG_ESTIMATE 商品评价图片
+     * TYPE_IMG_BANNER  广告图片
+     * TYPE_IMG_ACTIVITY  活动图片
+     * TYPE_IMG_RICH_CONTENT  富文本图片
+     * TYPE_IMG_ID_PHOTO  证件照图片
      */
     private String type;
 
