@@ -1,6 +1,7 @@
 package com.kunlun.utils;
 
 import com.kunlun.wxentity.OrderQueryResponseData;
+import com.kunlun.wxentity.UnifiedOrderNotifyRequestData;
 import com.kunlun.wxentity.UnifiedOrderResponseData;
 import com.kunlun.wxentity.WxRefundNotifyResponseData;
 import com.thoughtworks.xstream.XStream;
@@ -35,6 +36,18 @@ public class XmlUtil implements Serializable {
         return (UnifiedOrderResponseData) xStream.fromXML(responseString);
     }
 
+
+    /**
+     * 把XML字符串转换为统一下单回调接口请求数据对象
+     *
+     * @param requestString
+     * @return return:UnifiedOrderNotifyRequestData
+     */
+    public static UnifiedOrderNotifyRequestData castXMLStringToUnifiedOrderNotifyRequestData(String requestString) {
+        XStream xStream = new XStream(new DomDriver());
+        xStream.alias("xml", UnifiedOrderNotifyRequestData.class);
+        return (UnifiedOrderNotifyRequestData) xStream.fromXML(requestString);
+    }
 
     /**
      * 把XML字符串转换为退款返回对象

@@ -53,7 +53,8 @@ public class WxPayConstant implements Serializable {
     /**
      * 普通支付回调通知地址
      */
-    public final static String NOTIFY_URL = "https://zjhkhl.com/mall/wx/jsapi/callback/pay";
+//    public final static String NOTIFY_URL = "https://zjhkhl.com/mall/wx/jsapi/callback/pay";
+    public final static String NOTIFY_URL = "https://zjhkhl.com/mall/pay/order/payCallback";
 
     /**
      * 拼团回调通知地址
