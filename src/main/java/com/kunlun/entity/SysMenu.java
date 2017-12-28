@@ -79,7 +79,7 @@ public class SysMenu implements Serializable {
     /**
      * 操作人
      */
-    private String operate;
+    private String operator;
 
     /**
      * 节点
@@ -164,12 +164,12 @@ public class SysMenu implements Serializable {
         this.description = description;
     }
 
-    public String getOperate() {
-        return operate;
+    public String getOperator() {
+        return operator;
     }
 
-    public void setOperate(String operate) {
-        this.operate = operate;
+    public void setOperator(String operator) {
+        this.operator = operator;
     }
 
     public List<SysMenu> getLeaf() {
@@ -210,7 +210,7 @@ public class SysMenu implements Serializable {
                 ", createDate=" + createDate +
                 ", updateDate=" + updateDate +
                 ", description='" + description + '\'' +
-                ", operate='" + operate + '\'' +
+                ", operator='" + operator + '\'' +
                 ", leaf='" + leaf + '\'' +
                 '}';
     }
