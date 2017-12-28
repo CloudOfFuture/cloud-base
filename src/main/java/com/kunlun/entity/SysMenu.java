@@ -4,6 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author by fk
@@ -22,7 +23,7 @@ public class SysMenu implements Serializable {
     /**
      * 名称
      */
-    private String name;
+    private String menuName;
 
     /**
      * 父id
@@ -39,7 +40,7 @@ public class SysMenu implements Serializable {
      * PARENT_MENU 父菜单
      * SUBMENU     子菜单
      */
-    private String type;
+    private String menuType;
 
     /**
      * 状态
@@ -83,7 +84,7 @@ public class SysMenu implements Serializable {
     /**
      * 节点
      */
-    private String leaf;
+    private List<SysMenu> leaf;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -97,13 +98,6 @@ public class SysMenu implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Long getPid() {
         return pid;
@@ -121,13 +115,6 @@ public class SysMenu implements Serializable {
         this.url = url;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 
     public String getStatus() {
         return status;
@@ -185,22 +172,38 @@ public class SysMenu implements Serializable {
         this.operate = operate;
     }
 
-    public String getLeaf() {
+    public List<SysMenu> getLeaf() {
         return leaf;
     }
 
-    public void setLeaf(String leaf) {
+    public void setLeaf(List<SysMenu> leaf) {
         this.leaf = leaf;
+    }
+
+    public String getMenuName() {
+        return menuName;
+    }
+
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
+    }
+
+    public String getMenuType() {
+        return menuType;
+    }
+
+    public void setMenuType(String menuType) {
+        this.menuType = menuType;
     }
 
     @Override
     public String toString() {
         return "SysMenu{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", menuName='" + menuName + '\'' +
                 ", pid=" + pid +
                 ", url='" + url + '\'' +
-                ", type='" + type + '\'' +
+                ", menuType='" + menuType + '\'' +
                 ", status='" + status + '\'' +
                 ", icon='" + icon + '\'' +
                 ", sort=" + sort +
