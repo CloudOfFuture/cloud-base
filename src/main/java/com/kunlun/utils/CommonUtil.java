@@ -150,4 +150,40 @@ public class CommonUtil {
 
         return order;
     }
+
+
+
+    /**
+     * 组装订单日志
+     * @param orderNo
+     * @param action
+     * @param ipAddress
+     * @param orderId
+     * @return
+     */
+    public static OrderLog constructOrderLog(String orderNo,String action,String ipAddress,Long orderId){
+        OrderLog orderLog = new OrderLog();
+        orderLog.setOrderNo(orderNo);
+        orderLog.setAction(action);
+        orderLog.setIpAddress(ipAddress);
+        orderLog.setOrderId(orderId);
+        return orderLog;
+    }
+
+    /**
+     * 组装商品日志
+     * @param goodId
+     * @param goodName
+     * @param action
+     * @return
+     */
+    public static GoodLog constructGoodLog(Long goodId,String goodName,String action){
+        GoodLog goodLog = new GoodLog();
+        goodLog.setGoodId(goodId);
+        goodLog.setGoodName(goodName);
+        goodLog.setAction(action);
+        return goodLog;
+    }
+
+
 }
