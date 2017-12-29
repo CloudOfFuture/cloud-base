@@ -85,7 +85,7 @@ public class Activity implements Serializable {
     /**
      * 活动描述
      */
-    private String desctibes;
+    private String describes;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -179,12 +179,12 @@ public class Activity implements Serializable {
         this.discount = discount;
     }
 
-    public String getDesctibes() {
-        return desctibes;
+    public String getDescribes() {
+        return describes;
     }
 
-    public void setDesctibes(String desctibes) {
-        this.desctibes = desctibes;
+    public void setDescribes(String describes) {
+        this.describes = describes;
     }
 
     @Override
@@ -201,7 +201,7 @@ public class Activity implements Serializable {
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", discount=" + discount +
-                ", desctibes='" + desctibes + '\'' +
+                ", describes='" + describes + '\'' +
                 '}';
     }
 
