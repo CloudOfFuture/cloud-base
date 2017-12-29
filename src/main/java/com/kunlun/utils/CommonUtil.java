@@ -152,16 +152,16 @@ public class CommonUtil {
     }
 
 
-
     /**
      * 组装订单日志
+     *
      * @param orderNo
      * @param action
      * @param ipAddress
      * @param orderId
      * @return
      */
-    public static OrderLog constructOrderLog(String orderNo,String action,String ipAddress,Long orderId){
+    public static OrderLog constructOrderLog(String orderNo, String action, String ipAddress, Long orderId) {
         OrderLog orderLog = new OrderLog();
         orderLog.setOrderNo(orderNo);
         orderLog.setAction(action);
@@ -172,17 +172,25 @@ public class CommonUtil {
 
     /**
      * 组装商品日志
+     *
      * @param goodId
      * @param goodName
      * @param action
      * @return
      */
-    public static GoodLog constructGoodLog(Long goodId,String goodName,String action){
+    public static GoodLog constructGoodLog(Long goodId, String goodName, String action) {
         GoodLog goodLog = new GoodLog();
         goodLog.setGoodId(goodId);
         goodLog.setGoodName(goodName);
         goodLog.setAction(action);
         return goodLog;
+    }
+
+    public static Good constructGood(Long goodId, int stock) {
+        Good good = new Good();
+        good.setId(goodId);
+        good.setStock(stock);
+        return good;
     }
 
 

@@ -38,7 +38,7 @@ public class ActivityGood implements Serializable {
     /**
      * 商品库存
      */
-    private Integer stock;
+    private int stock;
 
     /**
      * 状态
@@ -89,11 +89,11 @@ public class ActivityGood implements Serializable {
         this.createDate = createDate;
     }
 
-    public Integer getStock() {
+    public int getStock() {
         return stock;
     }
 
-    public void setStock(Integer stock) {
+    public void setStock(int stock) {
         this.stock = stock;
     }
 
