@@ -73,7 +73,7 @@ public class GoodExt extends Good {
     /**
      * 图片地址暂定最多4-5张
      */
-    private List<MallImage> imgList;
+    private List<MallImg> imgList;
 
     public Long getActivityId() {
         return activityId;
@@ -147,11 +147,11 @@ public class GoodExt extends Good {
         this.sellerName = sellerName;
     }
 
-    public List<MallImage> getImgList() {
+    public List<MallImg> getImgList() {
         return imgList;
     }
 
-    public void setImgList(List<MallImage> imgList) {
+    public void setImgList(List<MallImg> imgList) {
         this.imgList = imgList;
     }
 }

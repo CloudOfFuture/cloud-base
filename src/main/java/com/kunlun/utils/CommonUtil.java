@@ -152,6 +152,7 @@ public class CommonUtil {
     }
 
 
+
     /**
      * 组装订单日志
      *
@@ -178,13 +179,33 @@ public class CommonUtil {
      * @param action
      * @return
      */
-    public static GoodLog constructGoodLog(Long goodId, String goodName, String action) {
+    public static GoodLog constructGoodLog(Long goodId,String goodName,String action){
         GoodLog goodLog = new GoodLog();
         goodLog.setGoodId(goodId);
         goodLog.setGoodName(goodName);
         goodLog.setAction(action);
         return goodLog;
     }
+
+    /**
+     * 构建积分日志
+     * @param userId
+     * @param operatPoint
+     * @param currentPoint
+     * @return
+     */
+    public static PointLog constructPointLog(String userId,Integer operatPoint,Integer currentPoint){
+        PointLog pointLog = new PointLog();
+        pointLog.setUserId(userId);
+        pointLog.setOperatePoint(operatPoint);
+        //查询用户现有积分
+        pointLog.setCurrentPoint(currentPoint);
+        //判断积分操作
+        String action = operatPoint>0?CommonEnum.ADD.getCode():CommonEnum.SUBTRACT.getCode();
+        pointLog.setAction(action);
+        return pointLog;
+    }
+
 
     public static Good constructGood(Long goodId, int stock) {
         Good good = new Good();
