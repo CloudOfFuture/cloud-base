@@ -25,6 +25,11 @@ public class Delivery implements Serializable {
     private String userId;
 
     /**
+     * 用户微信code
+     */
+    private String wxCode;
+
+    /**
      * 收件人
      */
     private String recipients;
@@ -192,11 +197,20 @@ public class Delivery implements Serializable {
         this.defaultAddress = defaultAddress;
     }
 
+    public String getWxCode() {
+        return wxCode;
+    }
+
+    public void setWxCode(String wxCode) {
+        this.wxCode = wxCode;
+    }
+
     @Override
     public String toString() {
         return "Delivery{" +
                 "id=" + id +
                 ", userId='" + userId + '\'' +
+                ", wxCode='" + wxCode + '\'' +
                 ", recipients='" + recipients + '\'' +
                 ", phone='" + phone + '\'' +
                 ", province='" + province + '\'' +
