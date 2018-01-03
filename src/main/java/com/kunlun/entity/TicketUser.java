@@ -32,7 +32,7 @@ public class TicketUser implements Serializable {
     /**
      * 优惠券数量
      */
-    private Integer num;
+    private int num;
 
     /**
      * 创建时间
@@ -81,11 +81,11 @@ public class TicketUser implements Serializable {
         this.userId = userId;
     }
 
-    public Integer getNum() {
+    public int getNum() {
         return num;
     }
 
-    public void setNum(Integer num) {
+    public void setNum(int num) {
         this.num = num;
     }
 

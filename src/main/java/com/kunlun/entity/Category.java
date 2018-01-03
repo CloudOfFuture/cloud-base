@@ -44,7 +44,7 @@ public class Category implements Serializable {
     /**
      * 排序
      */
-    private Integer sort;
+    private int sort;
 
     /**
      * 图标(一级类目才有)
@@ -107,11 +107,11 @@ public class Category implements Serializable {
         this.parentId = parentId;
     }
 
-    public Integer getSort() {
+    public int getSort() {
         return sort;
     }
 
-    public void setSort(Integer sort) {
+    public void setSort(int sort) {
         this.sort = sort;
     }
 
