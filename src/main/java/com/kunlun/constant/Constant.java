@@ -93,5 +93,14 @@ public class Constant {
      */
     public static final long TIME_TWO_HOUR = 1000 * 60 * 60 * 2;
 
+    /**
+     * status参数
+     */
+    public static final String STATUS = "status";
+
+    /**
+     * idList参数
+     */
+    public static final String ID_LIST = "idList";
 
 }
