@@ -34,12 +34,12 @@ public class PointLog implements Serializable{
     /**
      * 当前积分
      */
-    private Integer currentPoint;
+    private int currentPoint;
 
     /**
      * 操作积分
      */
-    private Integer operatePoint;
+    private int operatePoint;
 
     /**
      * 创建时间
@@ -75,19 +75,19 @@ public class PointLog implements Serializable{
         this.action = action;
     }
 
-    public Integer getCurrentPoint() {
+    public int getCurrentPoint() {
         return currentPoint;
     }
 
-    public void setCurrentPoint(Integer currentPoint) {
+    public void setCurrentPoint(int currentPoint) {
         this.currentPoint = currentPoint;
     }
 
-    public Integer getOperatePoint() {
+    public int getOperatePoint() {
         return operatePoint;
     }
 
-    public void setOperatePoint(Integer operatePoint) {
+    public void setOperatePoint(int operatePoint) {
         this.operatePoint = operatePoint;
     }
 

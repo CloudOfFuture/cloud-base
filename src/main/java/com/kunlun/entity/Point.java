@@ -27,12 +27,12 @@ public class Point implements Serializable{
     /**
      * 积分
      */
-    private Integer point;
+    private int point;
 
     /**
      * 等级
      */
-    private Integer level;
+    private int level;
 
     /**
      * 等级名称
@@ -71,19 +71,19 @@ public class Point implements Serializable{
         this.userId = userId;
     }
 
-    public Integer getPoint() {
+    public int getPoint() {
         return point;
     }
 
-    public void setPoint(Integer point) {
+    public void setPoint(int point) {
         this.point = point;
     }
 
-    public Integer getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public void setLevel(Integer level) {
+    public void setLevel(int level) {
         this.level = level;
     }
 

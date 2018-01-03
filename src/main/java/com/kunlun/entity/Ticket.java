@@ -49,12 +49,12 @@ public class Ticket implements Serializable {
     /**
      * 总金额
      */
-    private Integer money;
+    private int money;
 
     /**
      * 数量
      */
-    private Integer num;
+    private int num;
 
     /**
      * 状态
@@ -110,7 +110,7 @@ public class Ticket implements Serializable {
     /**
      * 满减金额
      */
-    private Integer reduceMoney;
+    private int reduceMoney;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -164,19 +164,19 @@ public class Ticket implements Serializable {
         this.endDate = endDate;
     }
 
-    public Integer getMoney() {
+    public int getMoney() {
         return money;
     }
 
-    public void setMoney(Integer money) {
+    public void setMoney(int money) {
         this.money = money;
     }
 
-    public Integer getNum() {
+    public int getNum() {
         return num;
     }
 
-    public void setNum(Integer num) {
+    public void setNum(int num) {
         this.num = num;
     }
 
@@ -244,11 +244,11 @@ public class Ticket implements Serializable {
         this.useDate = useDate;
     }
 
-    public Integer getReduceMoney() {
+    public int getReduceMoney() {
         return reduceMoney;
     }
 
-    public void setReduceMoney(Integer reduceMoney) {
+    public void setReduceMoney(int reduceMoney) {
         this.reduceMoney = reduceMoney;
     }
 

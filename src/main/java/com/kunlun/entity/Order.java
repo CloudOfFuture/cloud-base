@@ -127,7 +127,7 @@ public class Order implements Serializable {
     /**
      * 商品数量
      */
-    private Integer count;
+    private int count;
 
     /**
      * 微信订单号
@@ -193,32 +193,32 @@ public class Order implements Serializable {
     /**
      * 运费 (0为包邮)
      */
-    private Integer freightFee;
+    private int freightFee;
 
     /**
      * 商品金额
      */
-    private Integer goodFee;
+    private int goodFee;
 
     /**
      * 实付金额
      */
-    private Integer paymentFee;
+    private int paymentFee;
 
     /**
      * 优惠金额
      */
-    private Integer reduceFee;
+    private int reduceFee;
 
     /**
      * 订单金额
      */
-    private Integer orderFee;
+    private int orderFee;
 
     /**
      * 退款金额
      */
-    private Integer refundFee;
+    private int refundFee;
 
     /**
      * 发货信息id
@@ -228,7 +228,7 @@ public class Order implements Serializable {
     /**
      * 该订单消耗的积分
      */
-    private Integer operatePoint;
+    private int operatePoint;
 
     /**
      * USE_POINT     使用积分
@@ -392,11 +392,11 @@ public class Order implements Serializable {
         this.goodName = goodName;
     }
 
-    public Integer getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(Integer count) {
+    public void setCount(int count) {
         this.count = count;
     }
 
@@ -488,51 +488,51 @@ public class Order implements Serializable {
         this.updateDate = updateDate;
     }
 
-    public Integer getFreightFee() {
+    public int getFreightFee() {
         return freightFee;
     }
 
-    public void setFreightFee(Integer freightFee) {
+    public void setFreightFee(int freightFee) {
         this.freightFee = freightFee;
     }
 
-    public Integer getGoodFee() {
+    public int getGoodFee() {
         return goodFee;
     }
 
-    public void setGoodFee(Integer goodFee) {
+    public void setGoodFee(int goodFee) {
         this.goodFee = goodFee;
     }
 
-    public Integer getPaymentFee() {
+    public int getPaymentFee() {
         return paymentFee;
     }
 
-    public void setPaymentFee(Integer paymentFee) {
+    public void setPaymentFee(int paymentFee) {
         this.paymentFee = paymentFee;
     }
 
-    public Integer getReduceFee() {
+    public int getReduceFee() {
         return reduceFee;
     }
 
-    public void setReduceFee(Integer reduceFee) {
+    public void setReduceFee(int reduceFee) {
         this.reduceFee = reduceFee;
     }
 
-    public Integer getOrderFee() {
+    public int getOrderFee() {
         return orderFee;
     }
 
-    public void setOrderFee(Integer orderFee) {
+    public void setOrderFee(int orderFee) {
         this.orderFee = orderFee;
     }
 
-    public Integer getRefundFee() {
+    public int getRefundFee() {
         return refundFee;
     }
 
-    public void setRefundFee(Integer refundFee) {
+    public void setRefundFee(int refundFee) {
         this.refundFee = refundFee;
     }
 
@@ -544,11 +544,11 @@ public class Order implements Serializable {
         this.sendGoodId = sendGoodId;
     }
 
-    public Integer getOperatePoint() {
+    public int getOperatePoint() {
         return operatePoint;
     }
 
-    public void setOperatePoint(Integer operatePoint) {
+    public void setOperatePoint(int operatePoint) {
         this.operatePoint = operatePoint;
     }
 

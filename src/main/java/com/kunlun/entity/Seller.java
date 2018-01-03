@@ -52,7 +52,7 @@ public class Seller implements Serializable {
     /**
      * 信誉值(0-99)
      */
-    private Integer reputation;
+    private int reputation;
 
     /**
      * 店铺名称
@@ -138,11 +138,11 @@ public class Seller implements Serializable {
         this.sellerNo = sellerNo;
     }
 
-    public Integer getReputation() {
+    public int getReputation() {
         return reputation;
     }
 
-    public void setReputation(Integer reputation) {
+    public void setReputation(int reputation) {
         this.reputation = reputation;
     }
 

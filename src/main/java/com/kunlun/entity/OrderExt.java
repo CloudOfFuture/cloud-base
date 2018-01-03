@@ -1,6 +1,5 @@
 package com.kunlun.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * @author by fk

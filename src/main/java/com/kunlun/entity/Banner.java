@@ -61,7 +61,7 @@ public class Banner implements Serializable {
     /**
      * 排序
      */
-    private Integer sort;
+    private int sort;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -131,11 +131,11 @@ public class Banner implements Serializable {
         this.updateDate = updateDate;
     }
 
-    public Integer getSort() {
+    public int getSort() {
         return sort;
     }
 
-    public void setSort(Integer sort) {
+    public void setSort(int sort) {
         this.sort = sort;
     }
 

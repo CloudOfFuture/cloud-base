@@ -45,7 +45,7 @@ public class User implements Serializable {
     /**
      * 年龄
      */
-    private Integer age;
+    private int age;
 
     /**
      * 邮件
@@ -195,11 +195,11 @@ public class User implements Serializable {
         this.sex = sex;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
