@@ -10,7 +10,7 @@ import java.util.Date;
  * @version <0.1>
  * @created on 2017/12/13.
  */
-public class ActivityGood implements Serializable {
+public class ActivityGood extends GoodExt {
 
     private static final long serialVersionUID = 9220813765242042874L;
 
@@ -18,6 +18,8 @@ public class ActivityGood implements Serializable {
      * 主键
      */
     private Long id;
+
+    private Long activityGoodId;
 
     /**
      * 活动id
@@ -39,6 +41,8 @@ public class ActivityGood implements Serializable {
      * 商品库存
      */
     private int stock;
+
+    private int actgStock;
 
     /**
      * 状态
@@ -113,14 +117,32 @@ public class ActivityGood implements Serializable {
         this.updateDate = updateDate;
     }
 
+    public Long getActivityGoodId() {
+        return activityGoodId;
+    }
+
+    public void setActivityGoodId(Long activityGoodId) {
+        this.activityGoodId = activityGoodId;
+    }
+
+    public int getActgStock() {
+        return actgStock;
+    }
+
+    public void setActgStock(int actgStock) {
+        this.actgStock = actgStock;
+    }
+
     @Override
     public String toString() {
         return "ActivityGood{" +
                 "id=" + id +
+                ", activityGoodId=" + activityGoodId +
                 ", activityId=" + activityId +
                 ", goodId=" + goodId +
                 ", createDate=" + createDate +
                 ", stock=" + stock +
+                ", actgStock=" + actgStock +
                 ", status='" + status + '\'' +
                 ", updateDate=" + updateDate +
                 '}';
