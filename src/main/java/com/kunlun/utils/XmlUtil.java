@@ -95,4 +95,15 @@ public class XmlUtil implements Serializable {
         return stringBuffer.toString();
     }
 
+    /**
+     * 将对象转成XML流字符串
+     *
+     * @param object
+     * @return
+     */
+    public static  String castDataToXMLString(Object object){
+        XStream xStream = new XStream(new DomDriver("UTF-8", new XmlFriendlyNameCoder("-_", "_")));
+        return xStream.toXML(object);
+    }
+
 }
