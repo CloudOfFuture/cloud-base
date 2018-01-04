@@ -6,6 +6,7 @@ import com.kunlun.wxentity.UnifiedOrderResponseData;
 import com.kunlun.wxentity.WxRefundNotifyResponseData;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.io.xml.XmlFriendlyNameCoder;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -88,6 +89,17 @@ public class XmlUtil implements Serializable {
         }
         stringBuffer.append("</xml>");
         return stringBuffer.toString();
+    }
+
+    /**
+     * 将对象转成XML流字符串
+     *
+     * @param object
+     * @return
+     */
+    public static  String castDataToXMLString(Object object){
+        XStream xStream = new XStream(new DomDriver("UTF-8", new XmlFriendlyNameCoder("-_", "_")));
+        return xStream.toXML(object);
     }
 
 }
