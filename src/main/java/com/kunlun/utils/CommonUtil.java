@@ -63,15 +63,20 @@ public class CommonUtil {
         if (StringUtil.isEmpty(idCardNo)) {
             return null;
         }
-        int leg = idCardNo.length();
-        if (leg != 18 && leg != 15) {
-            return null;
-        } else if (leg == 18 && Integer.parseInt(idCardNo.substring(16).substring(0, 1)) % 2 == 0) {
-            return "FEMALE";
-        } else if (leg == 15 && Integer.parseInt(idCardNo.substring(14, 15)) % 2 == 0) {
-            return "FEMALE";
+        try {
+            int leg = idCardNo.length();
+            if (leg != 18 && leg != 15) {
+                return null;
+            } else if (leg == 18 && Integer.parseInt(idCardNo.substring(16).substring(0, 1)) % 2 == 0) {
+                return "FEMALE";
+            } else if (leg == 15 && Integer.parseInt(idCardNo.substring(14, 15)) % 2 == 0) {
+                return "FEMALE";
+            }
+            return "MALE";
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return "MALE";
+        return null;
     }
 
     /**
@@ -79,22 +84,27 @@ public class CommonUtil {
      *
      * @param idCardNo String
      */
-    public static Integer getAgeByIdCardNo(String idCardNo) {
+    public static int getAgeByIdCardNo(String idCardNo) {
         if (StringUtil.isEmpty(idCardNo)) {
-            return null;
+            return 0;
         }
-        int leg = idCardNo.length();
-        if (leg == 18) {
-            String dates = idCardNo.substring(6, 10);
-            SimpleDateFormat df = new SimpleDateFormat("yyyy");
-            String year = df.format(new Date());
-            return Integer.parseInt(year) - Integer.parseInt(dates);
-        } else {
-            String dates = "19" + idCardNo.substring(6, 8);
-            SimpleDateFormat df = new SimpleDateFormat("yyyy");
-            String year = df.format(new Date());
-            return Integer.parseInt(year) - Integer.parseInt(dates);
+        try {
+            int leg = idCardNo.length();
+            if (leg == 18) {
+                String dates = idCardNo.substring(6, 10);
+                SimpleDateFormat df = new SimpleDateFormat("yyyy");
+                String year = df.format(new Date());
+                return Integer.parseInt(year) - Integer.parseInt(dates);
+            } else {
+                String dates = "19" + idCardNo.substring(6, 8);
+                SimpleDateFormat df = new SimpleDateFormat("yyyy");
+                String year = df.format(new Date());
+                return Integer.parseInt(year) - Integer.parseInt(dates);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return 0;
     }
 
     /**
@@ -152,7 +162,6 @@ public class CommonUtil {
     }
 
 
-
     /**
      * 组装订单日志
      *
@@ -179,7 +188,7 @@ public class CommonUtil {
      * @param action
      * @return
      */
-    public static GoodLog constructGoodLog(Long goodId,String goodName,String action){
+    public static GoodLog constructGoodLog(Long goodId, String goodName, String action) {
         GoodLog goodLog = new GoodLog();
         goodLog.setGoodId(goodId);
         goodLog.setGoodName(goodName);
@@ -189,19 +198,20 @@ public class CommonUtil {
 
     /**
      * 构建积分日志
+     *
      * @param userId
      * @param operatPoint
      * @param currentPoint
      * @return
      */
-    public static PointLog constructPointLog(String userId,Integer operatPoint,Integer currentPoint){
+    public static PointLog constructPointLog(String userId, Integer operatPoint, Integer currentPoint) {
         PointLog pointLog = new PointLog();
         pointLog.setUserId(userId);
         pointLog.setOperatePoint(operatPoint);
         //查询用户现有积分
         pointLog.setCurrentPoint(currentPoint);
         //判断积分操作
-        String action = operatPoint>0?CommonEnum.ADD.getCode():CommonEnum.SUBTRACT.getCode();
+        String action = operatPoint > 0 ? CommonEnum.ADD.getCode() : CommonEnum.SUBTRACT.getCode();
         pointLog.setAction(action);
         return pointLog;
     }
