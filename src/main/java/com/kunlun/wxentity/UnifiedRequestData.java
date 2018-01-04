@@ -81,7 +81,7 @@ public class UnifiedRequestData {
 
     private String ipAddress;
 
-
+    private Long activityId;
     public String getOrderType() {
         return orderType;
     }
@@ -210,6 +210,14 @@ public class UnifiedRequestData {
         this.ticketId = ticketId;
     }
 
+    public Long getActivityId() {
+        return activityId;
+    }
+
+    public void setActivityId(Long activityId) {
+        this.activityId = activityId;
+    }
+
     @Override
     public String toString() {
         return "UnifiedRequestData{" +
@@ -229,6 +237,7 @@ public class UnifiedRequestData {
                 ", freightFee=" + freightFee +
                 ", wxCode='" + wxCode + '\'' +
                 ", ipAddress='" + ipAddress + '\'' +
+                ", activityId=" + activityId +
                 '}';
     }
 }
