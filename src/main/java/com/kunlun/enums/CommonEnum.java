@@ -101,6 +101,8 @@ public enum CommonEnum {
     PASS_AUDIT("PASS_AUDIT", "审核通过"),
     DELETE("DELETE", "删除状态"),
     CLOSE_LEADER("CLOSE_LEADER", "管理员关闭"),
+    SUCCESS("SUCCESS", "成功"),
+
 
     //图片类型
     TYPE_IMG_GOOD("TYPE_IMG_GOOD", "商品图片"),
