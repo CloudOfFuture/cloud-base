@@ -37,10 +37,6 @@ public class XmlUtil implements Serializable {
         return (UnifiedOrderResponseData) xStream.fromXML(responseString);
     }
 
-//    public static String castDataToXMLString(Object object) {
-//        XStream xStream = new XStream(new DomDriver("UTF-8", new XmlFriendlyNameCoder("-_", "_")));
-//        return xStream.toXML(object);
-//    }
 
     /**
      * 把XML字符串转换为统一下单回调接口请求数据对象
