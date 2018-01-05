@@ -17,8 +17,12 @@ public class WxPayConstant implements Serializable {
      * 证书
      */
     public static String CERT_SECRET = System.getProperty("user.dir")
-            + System.getProperty("file.separator") + "cert" + System.getProperty(
-            "file.separator") + "apiclient_cert.p12";
+            + System.getProperty("file.separator") +
+            "cloud-base" +
+            System.getProperty("file.separator") +
+            "cert" +
+            System.getProperty("file.separator") +
+            "apiclient_cert.p12";
 
     /**
      * 小程序ID
