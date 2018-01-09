@@ -1,6 +1,7 @@
 package com.kunlun.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -21,7 +22,7 @@ public class ActivityGood extends GoodExt {
     /**
      * 修改时间
      */
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
     private Date updateDate;
 
     public static long getSerialVersionUID() {

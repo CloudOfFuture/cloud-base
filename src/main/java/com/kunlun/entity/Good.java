@@ -1,6 +1,7 @@
 package com.kunlun.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -83,13 +84,13 @@ public class Good implements Serializable {
     /**
      * 创建时间
      */
-    @JSONField( format = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
     private Date createDate;
 
     /**
      * 最后更新时间
      */
-    @JSONField( format = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
     private Date lastUpdateDate;
 
     /**
