@@ -1,6 +1,7 @@
 package com.kunlun.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
@@ -9,7 +10,7 @@ import java.util.Date;
  * @version <0.1>
  * @created on 2018-01-09.
  */
-public class SendCood {
+public class SendGood {
 
     /**
      * 主键
@@ -19,31 +20,26 @@ public class SendCood {
     /**
      * 订单id
      */
-    @JSONField(name = "order_id")
     private Long orderId;
 
     /**
      * 寄件人信息id
      */
-    @JSONField(name = "seller_id")
     private Long senderId;
 
     /**
      * 快递名称
      */
-    @JSONField(name = "express_name")
     private String expressName;
 
     /**
      * 快递公司编号
      */
-    @JSONField(name = "express_no")
     private String expressNo;
 
     /**
      * 运单号
      */
-    @JSONField(name = "delivery_no")
     private String deliveryNo;
 
     /**
