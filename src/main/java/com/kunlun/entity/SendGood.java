@@ -9,7 +9,7 @@ import java.util.Date;
  * @version <0.1>
  * @created on 2018-01-09.
  */
-public class SendCood {
+public class SendGood {
 
     /**
      * 主键
@@ -19,43 +19,38 @@ public class SendCood {
     /**
      * 订单id
      */
-    @JSONField(name = "order_id")
     private Long orderId;
 
     /**
      * 寄件人信息id
      */
-    @JSONField(name = "seller_id")
     private Long senderId;
 
     /**
      * 快递名称
      */
-    @JSONField(name = "express_name")
     private String expressName;
 
     /**
      * 快递公司编号
      */
-    @JSONField(name = "express_no")
     private String expressNo;
 
     /**
      * 运单号
      */
-    @JSONField(name = "delivery_no")
     private String deliveryNo;
 
     /**
      * 创建时间
      */
-    @JSONField(name = "create_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     /**
      * 更新时间
      */
-    @JSONField(name = "update_date", format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public Long getId() {
@@ -124,7 +119,7 @@ public class SendCood {
 
     @Override
     public String toString() {
-        return "SendCood{" +
+        return "SendGood{" +
                 "id=" + id +
                 ", orderId=" + orderId +
                 ", senderId=" + senderId +
