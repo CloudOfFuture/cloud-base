@@ -1,6 +1,5 @@
 package com.kunlun.wxentity;
 
-import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * @author by kunlun

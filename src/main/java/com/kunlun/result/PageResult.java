@@ -1,6 +1,6 @@
 package com.kunlun.result;
 
-import com.alibaba.fastjson.annotation.JSONField;
+
 import com.github.pagehelper.Page;
 
 import java.io.Serializable;
@@ -16,11 +16,9 @@ public class PageResult<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     //当前页
-    @JSONField(name = "page_no")
     private int pageNum;
 
     //每页数量
-    @JSONField(name = "page_size")
     private int pageSize;
 
     //总记录数
@@ -33,14 +31,11 @@ public class PageResult<T> implements Serializable {
     private List<T> list;
 
     //是否为第一页
-    @JSONField(name = "is_first_page")
     private boolean isFirstPage = false;
 
     //是否为最后一页
-    @JSONField(name = "is_last_page")
     private boolean isLastPage = false;
 
-    @JSONField(name = "error_code")
     private String errorCode;
 
     private String message;

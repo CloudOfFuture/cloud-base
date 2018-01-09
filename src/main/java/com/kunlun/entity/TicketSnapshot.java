@@ -1,10 +1,5 @@
 package com.kunlun.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
-
-import java.io.Serializable;
-import java.util.Date;
-
 /**
  * @author by fk
  * @version <0.1>

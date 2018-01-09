@@ -1,6 +1,6 @@
 package com.kunlun.wxentity;
 
-import com.alibaba.fastjson.annotation.JSONField;
+
 
 /**
  * 订单查询条件封装
