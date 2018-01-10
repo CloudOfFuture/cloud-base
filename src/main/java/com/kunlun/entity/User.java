@@ -32,7 +32,7 @@ public class User implements Serializable {
     /**
      * 出生日期
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private String bornDate;
 
     /**
@@ -75,7 +75,8 @@ public class User implements Serializable {
     /**
      * 实名认证
      * NOT_AUTH      未实名认证
-     * IS_AUTH       认证通过
+     * AUDITING        审核中
+     * PASS_AUTH   认证通过
      * NOT_PASS_AUTH 认证未通过
      */
     private String certification;
@@ -100,19 +101,19 @@ public class User implements Serializable {
     /**
      * 创建时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createDate;
 
     /**
      * 更新时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date updateDate;
 
     /**
      * 最后登录时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date lastLoginDate;
 
     /**
