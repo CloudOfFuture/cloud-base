@@ -1,6 +1,6 @@
 package com.kunlun.utils;
 
-import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kunlun.wxentity.AuthorizationCode;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -134,14 +134,15 @@ public class WxUtil {
      * @param wxCode
      * @return
      */
-    public static String getOpenId(String wxCode) {
+    public static String getOpenId(String wxCode) throws IOException {
         String apiUrl = WxPayConstant.OPEN_ID_URL
                 + "appid=" + WxPayConstant.APP_ID
                 + "&secret=" + WxPayConstant.APP_SECRET
                 + "&js_code=" + wxCode
                 + "&grant_type=authorization_code";
         String response = WxUtil.httpsRequest(apiUrl, "GET", null);
-        AuthorizationCode authorizationCode = JSON.parseObject(response, AuthorizationCode.class);
+        ObjectMapper mapper=new ObjectMapper();
+        AuthorizationCode authorizationCode = mapper.readValue(response,AuthorizationCode.class);
         return authorizationCode.getOpenid();
     }
 }

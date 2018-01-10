@@ -1,6 +1,7 @@
 package com.kunlun.utils;
 
-import com.alibaba.fastjson.JSONObject;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.ByteArrayOutputStream;
@@ -60,11 +61,13 @@ public class IpUtil implements Serializable {
         String ipAddress = "[]";
         try {
             String context = call("http://ip.taobao.com/service/getIpInfo.php?ip=" + ip);
-            JSONObject jsonObject = JSONObject.parseObject(context);
-            String code = jsonObject.getString("code");
+            ObjectMapper mapper=new ObjectMapper();
+            mapper.writeValueAsString(context);
+            String code=mapper.writeValueAsString("code");
             if (code.equals("0")) {
-                JSONObject jsonObject1 = jsonObject.getJSONObject("data");
-                ipAddress = "[" + jsonObject1.get("country") + "/" + jsonObject1.get("city") + "]";
+                ObjectMapper mapper1=new ObjectMapper();
+                mapper1.writeValueAsString("data");
+                ipAddress = "[" + mapper1.writeValueAsString("country") + "/" + mapper1.writeValueAsString("city") + "]";
             }
         } catch (Exception e) {
             e.printStackTrace();
