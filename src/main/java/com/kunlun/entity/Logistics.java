@@ -33,6 +33,10 @@ public class Logistics {
      */
     private String logisticName;
 
+    /**
+     * 快递编号
+     */
+    private String expressNo;
 
     /**
      * 物流单号
@@ -47,13 +51,13 @@ public class Logistics {
     /**
      * 创建时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createDate;
 
     /**
      * 更新时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date updateDate;
 
     public Long getId() {
@@ -120,6 +124,14 @@ public class Logistics {
         this.updateDate = updateDate;
     }
 
+    public String getExpressNo() {
+        return expressNo;
+    }
+
+    public void setExpressNo(String expressNo) {
+        this.expressNo = expressNo;
+    }
+
     @Override
     public String toString() {
         return "Logistics{" +
@@ -127,6 +139,7 @@ public class Logistics {
                 ", orderId=" + orderId +
                 ", senderId=" + senderId +
                 ", logisticName='" + logisticName + '\'' +
+                ", expressNo='" + expressNo + '\'' +
                 ", logisticNo='" + logisticNo + '\'' +
                 ", companyCode='" + companyCode + '\'' +
                 ", createDate=" + createDate +
