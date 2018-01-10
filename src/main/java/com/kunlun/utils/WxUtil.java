@@ -1,5 +1,6 @@
 package com.kunlun.utils;
 
+import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kunlun.wxentity.AuthorizationCode;
 
@@ -141,14 +142,7 @@ public class WxUtil {
                 + "&js_code=" + wxCode
                 + "&grant_type=authorization_code";
         String response = WxUtil.httpsRequest(apiUrl, "GET", null);
-        ObjectMapper mapper = new ObjectMapper();
-        AuthorizationCode authorizationCode;
-        try {
-            authorizationCode = mapper.readValue(response, AuthorizationCode.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        AuthorizationCode authorizationCode = JSON.parseObject(response, AuthorizationCode.class);
         return authorizationCode.getOpenid();
     }
 }
