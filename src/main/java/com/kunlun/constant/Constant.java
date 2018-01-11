@@ -103,4 +103,11 @@ public class Constant {
      */
     public static final String ID_LIST = "idList";
 
+
+    /**
+     * 个人积分等级划分
+     */
+    public static final int WX_POINT_LEVEL1 = 36;
+    public static final int WX_POINT_LEVEL2 = 750;
+    public static final int WX_POINT_LEVEL3 = 1500;
 }
