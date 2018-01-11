@@ -68,20 +68,25 @@ public class Delivery implements Serializable {
     /**
      * 创建时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createDate;
 
     /**
      * 修改时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",locale = "zh",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date updateDate;
 
     /**
-     * 0 客户
-     * 1 商家
+     * 客户、买家  BUYER
+     * 商家 SELLER
      */
     private String type;
+
+    /**
+     * 正常 NORMAL,非正常 UN_NORMAL
+     */
+    private String status;
 
     /**
      * 默认地址
@@ -206,6 +211,14 @@ public class Delivery implements Serializable {
         this.wxCode = wxCode;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Delivery{" +
@@ -222,6 +235,7 @@ public class Delivery implements Serializable {
                 ", createDate=" + createDate +
                 ", updateDate=" + updateDate +
                 ", type='" + type + '\'' +
+                ", status='" + status + '\'' +
                 ", defaultAddress='" + defaultAddress + '\'' +
                 '}';
     }
