@@ -77,6 +77,8 @@ public class OrderExt extends Order {
      */
     private String endDate;
 
+    private SendGood sendGood;
+
     public String getIpAddress() {
         return ipAddress;
     }
@@ -190,6 +192,14 @@ public class OrderExt extends Order {
         this.logistics = logistics;
     }
 
+    public SendGood getSendGood() {
+        return sendGood;
+    }
+
+    public void setSendGood(SendGood sendGood) {
+        this.sendGood = sendGood;
+    }
+
     @Override
     public String toString() {
         return "OrderExt{" +
@@ -207,6 +217,7 @@ public class OrderExt extends Order {
                 ", searchKey='" + searchKey + '\'' +
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +
+                ", sendGood=" + sendGood +
                 '}';
     }
 }
