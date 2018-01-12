@@ -77,6 +77,9 @@ public class OrderExt extends Order {
      */
     private String endDate;
 
+    /**
+     * 发货信息
+     */
     private SendGood sendGood;
 
     public String getIpAddress() {
